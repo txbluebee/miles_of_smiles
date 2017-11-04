@@ -80,9 +80,10 @@ Rails.application.configure do
   # config/environments/production.rb
   config.paperclip_defaults = {
     storage: :s3,
+    :s3_host_name => "s3-us-west-2.amazonaws.com",
     s3_credentials: {
       bucket: ENV.fetch('miles-of-smiles'),
-      access_key_id: ENV.fetch('AWSAccessKeyId=AKIAJ2HMTHFIAERHHLAQ'),
+      access_key_id: ENV.fetch('AKIAJ2HMTHFIAERHHLAQ'),
       secret_access_key: ENV.fetch('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'),
       s3_region: ENV.fetch('us-west-2'),
     }
