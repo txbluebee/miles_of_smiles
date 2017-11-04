@@ -77,6 +77,17 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  # config/environments/production.rb
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('miles-of-smiles'),
+      access_key_id: ENV.fetch('AWSAccessKeyId=AKIAJ2HMTHFIAERHHLAQ'),
+      secret_access_key: ENV.fetch('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'),
+      s3_region: ENV.fetch('us-west-2'),
+    }
+  }
+
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
@@ -91,13 +102,3 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 end
 
-# config/environments/production.rb
-config.paperclip_defaults = {
-  storage: :s3,
-  s3_credentials: {
-    bucket: ENV.fetch('miles-of-smiles'),
-    access_key_id: ENV.fetch('AWSAccessKeyId=AKIAJ2HMTHFIAERHHLAQ'),
-    secret_access_key: ENV.fetch('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'),
-    s3_region: ENV.fetch('us-west-2'),
-  }
-}
