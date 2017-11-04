@@ -82,10 +82,10 @@ Rails.application.configure do
     storage: :s3,
     :s3_host_name => "s3-us-west-2.amazonaws.com",
     s3_credentials: {
-      bucket: ENV.fetch('miles-of-smiles'),
-      access_key_id: ENV.fetch('AKIAJ2HMTHFIAERHHLAQ'),
-      secret_access_key: ENV.fetch('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'),
-      s3_region: ENV.fetch('us-west-2'),
+      bucket: ENV.fetch('S3_BUCKET_NAME'),
+      access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+      secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+      s3_region: ENV.fetch('AWS_REGION'),
     }
   }
 
