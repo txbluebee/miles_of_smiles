@@ -13,7 +13,8 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'sprockets-rails'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form'

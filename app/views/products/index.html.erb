@@ -1,3 +1,4 @@
+
 <%= render "layouts/navbar" %>
 <%= render "layouts/header" %>
 <div class="album text-muted">
@@ -6,9 +7,9 @@
       <% if @products.any? %>
         <% @products.each do |product|  %>
           <div class="col-12 col-sm-6 col-md-3">
-            <div class="card">
-              <%= link_to product do %>
-                <%= image_tag product.image.url(:medium) %>
+            <div class="card text-center">
+              <%= link_to product, class:'text-secondary' do %>
+                <%= image_tag product.image.url(:medium), class: 'card-img-top', width: '250' %>
                   <p class="card-text"> <b><%= product.name %></b></p>
               <% end %>
             </div>
