@@ -37,6 +37,7 @@ gem 'faker'
 gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
+gem 'meta-tags'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
