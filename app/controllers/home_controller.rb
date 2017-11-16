@@ -7,7 +7,7 @@ class HomeController < ApplicationController
                     description: "eCommerce Photography Websites",
                     type:     'website',
                     url:      '/',
-                    image:    '<%= image_tag "cover.jpg" %>'
+                    image:    'http://lorempixel.com/320/240/cats'
                   }
   end
 end
