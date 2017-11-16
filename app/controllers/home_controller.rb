@@ -3,11 +3,11 @@ class HomeController < ApplicationController
     set_meta_tags title: 'Miles of Smiles',
                   description: 'eCommerce Photography Websites',
                   og: {
-                    title:    "Home",
+                    title:    "Miles of Smiles",
                     description: "eCommerce Photography Websites",
                     type:     'website',
                     url:      '/',
-                    image:    '<%= image_path("images/cover.jpg") %>'
+                    image:    '<%= image_tag "cover.jpg" %>'
                   }
   end
 end
